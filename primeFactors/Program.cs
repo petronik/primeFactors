@@ -3,16 +3,28 @@ using System.Collections.Generic;
 
 namespace primeFactors
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            int num1;
-            Console.WriteLine("Please enter your integer: ");
-            num1 = int.Parse(Console.ReadLine());
-            Console.WriteLine($"Prime factors of {num1} are: {primeFactors(num1)}");
+            while (true)
+            {
 
-            Console.WriteLine("Thank you! Bye!");
+
+                int num1;
+                Console.WriteLine("Please enter your integer or 0 to exit: ");
+                num1 = int.Parse(Console.ReadLine());
+
+                if(num1 == 0)
+                {
+                    Console.WriteLine("Thank you! Bye!");
+                    break;
+                }
+
+                Console.WriteLine($"Prime factors of {num1} are: {primeFactors(num1)}");
+
+                
+            }
         }
 
         public static string primeFactors(int number)
